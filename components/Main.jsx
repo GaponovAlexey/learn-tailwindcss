@@ -1,12 +1,30 @@
+import { useState } from 'react'
 import styles from '../styles/main.module.scss'
 
 const Main = () => {
+  const [email, setemail] = useState(null)
+  const [password, setpassword] = useState(null)
+  const [isOpen, setisOpen] = useState(false);
+  
+
   return (
     <div className={styles.parent}>
-      <h1 className='text-4xl text-center text-gray-400 font-bold '>hello</h1>
-      <button className='mt-10 bg-red-300 rounded-xl bg-opacity-60 block mx-auto py-2 px-14 hover:bg-opacity-100 transition delay-20 hover:animate-bounce md:bg-green-500  '>
-        <div>you</div>
-      </button>
+      <h1 className={styles.title}>hello</h1>
+      <div>
+        <input
+          placeholder='email'
+          value={email}
+          onChange={(e) => setemail(e.target.value)}
+        />
+        <input
+          placeholder='password'
+          value={password}
+          onChange={(e) => setpassword(e.target.value)}
+        />
+        <button onClick={() => setisOpen(!isOpen)} className={styles.button}>you</button>
+      </div>
+
+      {isOpen && <button className='animate-fade' >TEST</button>}
     </div>
   )
 }

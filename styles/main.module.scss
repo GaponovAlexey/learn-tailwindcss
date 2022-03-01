@@ -1,3 +1,24 @@
 .parent {
-  @apply border dark:bg-slate-900 border-red-600 rounded-xl m-8 h-32;
+  @apply m-8 mt-0;
+
+  .title {
+    @apply text-4xl text-center text-white font-bold;
+  }
+
+  > div {
+    @apply shadow-xl rounded-sm overflow-hidden duration-[100];
+
+    input {
+      @apply block w-full bg-white bg-opacity-10 border-r-2 border-transparent focus:border-slate-200 px-4
+    py-3 outline-none text-slate-50 transition-colors;
+    }
+
+    .button {
+      @apply bg-orange-600
+    py-2 w-full text-white
+    hover:animate-pulse 
+    transition-colors;
+    }
+     
+  }
 }
