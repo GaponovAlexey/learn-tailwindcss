@@ -8,6 +8,9 @@ const options = [
 
 export default function AnimatedMulti() {
   const [curentCantryes, setcurentCantryes] = useState(['south-korea'])
+
+  console.log(curentCantryes);
+
   const isMulti = true
   const getValue = () => {
     if (curentCantryes) {
@@ -30,7 +33,7 @@ export default function AnimatedMulti() {
       <Select
         value={getValue()}
         instanceId
-        isMulti
+        isMulti={isMulti}
         onChange={onChange}
         options={options}
       />
