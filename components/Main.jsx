@@ -4,11 +4,10 @@ import styles from '../styles/main.module.scss'
 const Main = () => {
   const [email, setemail] = useState(null)
   const [password, setpassword] = useState(null)
-  const [isOpen, setisOpen] = useState(false)
 
   return (
     <div className={styles.parent}>
-      <h1 className={styles.title}>hello</h1>
+      <h1 className={styles.title}>Todo</h1>
       <div>
         <input
           type='text'
@@ -23,11 +22,9 @@ const Main = () => {
           onChange={(e) => setpassword(e.target.value)}
         />
         <button onClick={() => setisOpen(!isOpen)} className={styles.button}>
-          you
+          ADD
         </button>
       </div>
-
-      {isOpen && <button className='animate-fade'>TEST</button>}
     </div>
   )
 }

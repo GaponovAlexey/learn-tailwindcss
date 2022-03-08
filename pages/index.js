@@ -23,8 +23,6 @@ export default function Home(props) {
       </Head>
       <main>
         <Main />
-        {/* <Select /> */}
-        cmf
       </main>
     </>
   )
