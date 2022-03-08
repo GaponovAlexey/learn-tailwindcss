@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import styles from '../styles/main.module.scss'
 
-const Main = () => {
+const Main = ({data}) => {
+  console.log(data);
   const [email, setemail] = useState(null)
   const [password, setpassword] = useState(null)
 

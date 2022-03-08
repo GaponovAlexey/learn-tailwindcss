@@ -14,15 +14,15 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home(props) {
+export default function Home({ data }) {
   return (
     <>
       <Head>
-        <title>tailwindcss</title>
+        <title>todo</title>
         <link rel='icon' href='#!' />
       </Head>
       <main>
-        <Main />
+        <Main data={data} />
       </main>
     </>
   )

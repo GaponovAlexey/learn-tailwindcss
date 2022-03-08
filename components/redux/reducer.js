@@ -4,14 +4,12 @@ const initialState = {
   value: 0,
 }
 
-export const counterSlice = createSlice({
+const counterSlice = createSlice({
   name: 'counter',
   initialState,
-  reducers: {
-   
-  },
+  
 })
 
-export const {  } = counterSlice.actions
+// export const {  } = counterSlice.actions
 
 export default counterSlice.reducer

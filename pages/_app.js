@@ -2,7 +2,8 @@ import '../styles/globals.css'
 
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query'
 import React from 'react'
-import { store } from '../components/redux'
+import { store } from '../components/redux/index'
+import { Provider } from 'react-redux'
 
 export default function MyApp({ Component, pageProps }) {
   const [queryClient] = React.useState(() => new QueryClient())
