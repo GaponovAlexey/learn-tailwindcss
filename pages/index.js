@@ -21,7 +21,8 @@ export default function Home(props) {
         <link rel='icon' href='#!' />
       </Head>
       <main>
-        <Main />
+        {/* <Main /> */}
+        <Select />
       </main>
     </>
   )
